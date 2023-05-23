@@ -13,6 +13,35 @@ function openTab(tabName) {
 	document.getElementById(tabName).classList.add("active-tab");
 }
 
+// Portfolio Section
+function showAdditionalProjects() {
+	const additionalProjects = document.getElementsByClassName("additional");
+	const viewMoreBtn = document.querySelector(".btn");
+
+	for (let i = 0; i < additionalProjects.length; i++) {
+		additionalProjects[i].style.display = "block";
+	}
+
+	viewMoreBtn.classList.add("hidden");
+}
+
+document.querySelector(".btn").addEventListener("click", showAdditionalProjects);
+
+window.addEventListener("DOMContentLoaded", function() {
+	const additionalProjects = document.getElementsByClassName("additional");
+
+	// Hide the additional projects by default
+	for (let i = 0; i < additionalProjects.length; i++) {
+		additionalProjects[i].style.display = "none";
+	}
+
+	// Show the "View More" button if there are additional projects
+	const viewMoreBtn = document.querySelector(".btn");
+	if (additionalProjects.length > 0) {
+		viewMoreBtn.classList.add("show-btn");
+	}
+});
+
 // Side Menu
 const sideMenu = document.getElementById("side-menu");
 
