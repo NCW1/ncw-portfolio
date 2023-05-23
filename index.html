@@ -1,15 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>[insert name] Portifolio</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chang Wang's Portfolio</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="script.js">
+	<script src="https://kit.fontawesome.com/d9248fe8bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<h1>Hello, my name is Chang Wang.</h1>
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+			<nav>
+				<img src="images/logo.png" alt="Logo" class="logo">
+				<ul id="side-menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></a></li>
+					<i class="fas fa-times" onclick="closeMenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openMenu()"></i>
+			</nav>
+			<div class="header-text">
+				<p>React Full Stack Web Developer</p>
+				<h1>Hi, I'm <span>Chang Wang</span><br>From KL, Malaysia</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- About Section -->
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="images/profile-picture.JPG" alt="Profile Picture">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p class="intro">
+						From a young age, I have always been fascinated by technology and its potential to change the
+						world. I vividly remember the first time I used a computer and how amazed I was by its ability
+						to process information and connect people across the globe.
+						<br><br>
+						As I grew older, I realized that technology was more than just a tool for communication and
+						entertainment, it was also a powerful tool for solving problems and creating positive change in
+						the world. That's what made me want to learn coding.
+						<br><br>
+						My goal is to become a React Full Stack Web Developer and use my coding skills to make a
+						meaningful impact in people's lives by creating innovative solutions to real-world problems. I
+						believe that technology has the power to transform the way we live and work, and I want to be a
+						part of that transformation.
+						<br><br>
+						Currently, I am learning a variety of tech skills including HTML, CSS, JavaScript, React, SQL,
+						Express, and Firebase, among others. I am excited about the endless possibilities that these
+						technologies offer and how they can be used to create dynamic, user-friendly, and responsive
+						applications.
+						<br><br>
+						Whether it's developing a new app or website, creating a platform for social change, or solving
+						complex business problems, I am passionate about leveraging technology to create innovative
+						solutions. I am excited to continue my journey in the tech world and to see where this path
+						takes me.
+					</p>
+
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+						<p class="tab-links" onclick="openTab('experience')">Experience</p>
+						<p class="tab-links" onclick="openTab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>Full-Stack Web Development</span><br>Develop Web Applications using Front-End
+								& Back-End Technologies.</li>
+							<li><span>Front-End Web Development</span><br>HTML, CSS, Bootstrap, JavaScript, React
+							</li>
+							<li><span>Back-End Web Development</span><br>SQL, Express, Firebase</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>May 2023 - Current</span><br>Coding Bootcamp Student at Sigma School</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>May 2023 - Current</span><br>Complete Software Development Online Bootcamp by
+								Sigma School
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Services Section -->
+	<div id="services">
+		<div class="container">
+			<h1 class="sub-title">My Services</h1>
+			<div class="services-list">
+				<div>
+					<i class="fas fa-code"></i>
+					<h2>Web Design</h2>
+					<p class="services-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, itaque?
+						Quae beatae enim id
+						sapiente nisi iusto? Temporibus odit, error et facere ducimus aut est mollitia. Quisquam
+						exercitationem expedita ipsam!</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div>
+					<i class="fas fa-crop-alt"></i>
+					<h2>UI/UX Design</h2>
+					<p class="services-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, itaque?
+						Quae beatae enim id
+						sapiente nisi iusto? Temporibus odit, error et facere ducimus aut est mollitia. Quisquam
+						exercitationem expedita ipsam!</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div>
+					<i class="fab fa-app-store"></i>
+					<h2>Web Development</h2>
+					<p class="services-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, itaque?
+						Quae beatae enim id
+						sapiente nisi iusto? Temporibus odit, error et facere ducimus aut est mollitia. Quisquam
+						exercitationem expedita ipsam!</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Portfolio Section -->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">My Work</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="images/work-1.png" alt="Portfolio Image">
+					<div class="layer">
+						<h3>Authentication App</h3>
+						<p class="work-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+							nostrum, odio numquam
+							culpa, mollitia veniam reiciendis nihil dolorum quam a provident nesciunt officia aliquam
+							reprehenderit cumque tempora illum possimus aut?</p>
+						<a href="https://authentication-app-compulsory-ngenchangwang.online-full-time-bootcamp.repl.co/"
+							target="_blank"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/work-2.png" alt="Portfolio Image">
+					<div class="layer">
+						<h3>Translator App</h3>
+						<p class="work-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia deserunt
+							tempore, sequi
+							sint laboriosam sed illo rem accusamus sunt esse? Nulla dolore ab praesentium eum eaque quis
+							blanditiis commodi quae?</p>
+						<a href="https://translator-app-compulsory-ngenchangwang.online-full-time-bootcamp.repl.co/"
+							target="_blank"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/work-3.png" alt="Portfolio Image">
+					<div class="layer">
+						<h3>Movie App</h3>
+						<p class="work-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi libero
+							facere sapiente ipsa
+							repudiandae magnam totam excepturi dolorem consequuntur perspiciatis eaque optio a molestias
+							nostrum dolores, voluptatum neque minima reprehenderit?</p>
+						<a href="https://movie-app-optional-ngenchangwang.online-full-time-bootcamp.repl.co/"
+							target="_blank"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn">View More</a>
+		</div>
+	</div>
+
+	<!-- Contact Section -->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fas fa-paper-plane"></i> ngenchangwang@gmail.com</p>
+					<p><i class="fas fa-phone-square-alt"></i> +6017-2321386</p>
+					<div class="social-icons">
+						<a href="https://www.facebook.com/NgenChangWang" class="fab fa-facebook" target="_blank"></a>
+						<a href="https://www.instagram.com/ngenchangwang/" class="fab fa-instagram" target="_blank"></a>
+						<a href="https://www.linkedin.com/in/chang-wang-ngen/" class="fab fa-linkedin"
+							target="_blank"></a>
+						<a href="https://twitter.com/NgenChangWang" class="fab fa-twitter-square" target="_blank"></a>
+					</div>
+					<a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+				</div>
+				<div class="contact-right">
+					<form>
+						<input type="text" name="name" placeholder="Enter Your Name" required>
+						<input type="email" name="email" placeholder="Enter Your E-mail" required>
+						<textarea name="message" rows="6" placeholder="Enter Your Message"></textarea>
+						<button type="submit" class="btn btn2">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script> Chang Wang. Made with <i
+					class="fas fa-heart"></i> by Chang Wang Ngen
+			</p>
+		</div>
+	</div>
+
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn"><i class="fa fa-arrow-up"></i></button>
+
 	<script src="script.js"></script>
 </body>
 
