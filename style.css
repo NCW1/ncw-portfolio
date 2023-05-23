@@ -36,6 +36,10 @@ nav {
 	flex-wrap: wrap;
 }
 
+nav .fas {
+	display: none;
+}
+
 .logo {
 	width: 120px;
 }
@@ -409,11 +413,13 @@ form .btn2 {
 	background-color: #555;
 }
 
-/* Media Query for Small Screens */
-nav .fas {
-	display: none;
+#msg {
+	color: #61b752;
+	margin-top: -40px;
+	display: block;
 }
 
+/* Media Query for Small Screens */
 @media only screen and (max-width: 600px) {
 	.header-text {
 		margin-top: 100%;
